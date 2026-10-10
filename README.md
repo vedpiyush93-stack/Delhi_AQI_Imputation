@@ -58,11 +58,11 @@ Hide readings we have, refill them, and score the refill: RMSE in AQI points, lo
 **R K Puram's own readings could not see the dip of 10–12 Nov; the other monitors did.**
 
 * **R K Puram's week.** Its seven readings of 7–13 Nov 2023 are hidden once; every method refills them.
-* **Random days.** The 73,498 readings are dealt at random into 10 piles of about 7,350. Each pile is hidden in turn:
+* **Random days.** The 73,498 readings are dealt at random into 10 folds of about 7,350. Each fold is hidden in turn:
   every method is fitted on the other nine and scored on the hidden one, so every reading is scored once.
-  ± is the standard error over the 10 piles.
-* **Tuning.** This method's $f$, $\lambda$, $\gamma$ are chosen inside each fold on a different pile, so the scored
-  pile never helps choose them.
+  ± is the standard error over the 10 folds.
+* **Tuning.** This method's $f$, $\lambda$, $\gamma$ are tuned on a different fold from the one being scored, so the
+  scored fold never helps choose them.
 * **Auto ARIMA** is [statsforecast](https://github.com/Nixtla/statsforecast)'s `AutoARIMA` (Hyndman–Khandakar stepwise
   search by AICc). It needs an unbroken series, so each monitor's blanks are first filled by straight lines; each
   hidden day is then predicted from the days before it.
@@ -89,7 +89,7 @@ Then **Run All**. In VS Code, open the notebook and pick the `.venv` interpreter
 * Section 5 (cross-validation) refits every method 20 times: about 9 minutes on 16 cores, longer on a laptop.
   Progress bars show how far it has got.
 * To skip it, set `RUN_CV = False` in the first code cell; the notebook then loads `results/cv_folds.csv`.
-* The piles are dealt with fixed seeds, so a rerun hides the same readings.
+* The folds are dealt with fixed seeds, so a rerun hides the same readings.
 
 Tested on macOS (Apple silicon), Python 3.12.2, with the versions in `requirements.txt`.
 
