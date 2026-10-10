@@ -14,11 +14,13 @@ The four monitors within 8 km of TERI SAS are on top.</em></p>
 
 | | |
 |:--|:--|
-| **1 in 7** | monitor-days in service have no AQI (2017–23) |
-| **clean months** | July: AQI 101, 23% blank. November: AQI 347, 14% blank |
-| **+8 AQI** | Delhi's 2023 average is 213 from the readings alone, 205 with the blanks filled by this method |
+| **the rule** | A day needs at least **16 hours** of readings, or it gets no AQI ([CPCB, National Air Quality Index](https://cpcb.gov.in/displaypdf.php?id=bmF0aW9uYWwtYWlyLXF1YWxpdHktaW5kZXgvRklOQUwtUkVQT1JUX0FRSV8ucGRm)). In 2017, **35%** of monitor-days were blank. |
+| **what goes missing** | The clean days. In 2017, **67%** of monitor-days were blank in the monsoon (Jul–Sep), against **28%** in the winter smog (Oct–Dec). |
+| **the yearly mean** | The national standard's yearly figure is the mean of the readings ([NAAQS 2009](https://cpcb.gov.in/uploads/National_Ambient_Air_Quality_Standards.pdf)). For 2017 that is **244**; with the blanks filled by this method, **197**: **+47 AQI** too high. |
 
-The blanks fall more on clean days, so an average over the readings alone comes out too high.
+**Averaging just the readings we have biases the yearly average.** The bias does not depend on the model: averaging
+each month's readings and weighting the month by its days in service, with no filling at all, 2017 comes to 224,
+so the readings alone are still 20 points too high.
 
 ## The method
 
