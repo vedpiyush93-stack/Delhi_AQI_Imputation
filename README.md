@@ -7,7 +7,7 @@ squares**, and tests it against four standard methods on readings that exist but
 The whole analysis is one notebook, [`Delhi_AQI_Imputation.ipynb`](Delhi_AQI_Imputation.ipynb), saved with its outputs.
 
 <p align="center"><img src="figures/gaps.png" width="820" alt="Daily AQI of Delhi's 39 monitors, 2017-2023, with the blanks in red"></p>
-<p align="center"><em>One row per monitor, one column per day. Red: no reading. Pale: not yet installed.<br>
+<p align="center"><em>One row per monitor, one column per day. Blue: clean air; red: smog. White: no reading. Grey: not in service.<br>
 The four monitors within 8 km of TERI SAS are on top.</em></p>
 
 ## Why the blanks matter
