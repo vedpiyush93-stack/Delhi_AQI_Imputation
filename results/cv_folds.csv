@@ -1,0 +1,121 @@
+test,fold,method,rmse
+random days,0,carry forward,57.41153054738861
+random days,0,linear interpolation,43.38352267763588
+random days,0,city average,40.02199120648665
+random days,0,auto ARIMA,51.077856351938124
+random days,0,this method,24.45180916656596
+random days,0,"this method, no smooth term",31.89403149615787
+random days,1,carry forward,58.437028422492126
+random days,1,linear interpolation,43.55363551831261
+random days,1,city average,39.3897596004941
+random days,1,auto ARIMA,51.69455135700869
+random days,1,this method,23.88434259641575
+random days,1,"this method, no smooth term",31.048403481817815
+random days,2,carry forward,57.45282185287897
+random days,2,linear interpolation,42.777801069238734
+random days,2,city average,39.64957045685536
+random days,2,auto ARIMA,50.996786282959825
+random days,2,this method,24.50162613442342
+random days,2,"this method, no smooth term",31.70886450976567
+random days,3,carry forward,57.99511567145389
+random days,3,linear interpolation,43.51482984421849
+random days,3,city average,40.42584015656371
+random days,3,auto ARIMA,51.34541712726891
+random days,3,this method,24.300544358389388
+random days,3,"this method, no smooth term",31.40948489822513
+random days,4,carry forward,57.47783342811253
+random days,4,linear interpolation,43.15920969981153
+random days,4,city average,39.13078269004483
+random days,4,auto ARIMA,50.71561346389529
+random days,4,this method,23.258857917132524
+random days,4,"this method, no smooth term",30.37896569226634
+random days,5,carry forward,56.71440897228696
+random days,5,linear interpolation,42.59466501078671
+random days,5,city average,39.76884891533765
+random days,5,auto ARIMA,50.214211378647946
+random days,5,this method,23.33185214096453
+random days,5,"this method, no smooth term",30.741542347217464
+random days,6,carry forward,57.25957773478859
+random days,6,linear interpolation,43.03646430319847
+random days,6,city average,39.81558326886424
+random days,6,auto ARIMA,51.01862674224485
+random days,6,this method,24.148168389488074
+random days,6,"this method, no smooth term",31.18183459597432
+random days,7,carry forward,56.5414834560891
+random days,7,linear interpolation,42.31070771756999
+random days,7,city average,40.39419894938639
+random days,7,auto ARIMA,49.96391364868829
+random days,7,this method,23.92938432990347
+random days,7,"this method, no smooth term",32.084180294658
+random days,8,carry forward,57.56818732227259
+random days,8,linear interpolation,43.271076038371724
+random days,8,city average,40.08641541649091
+random days,8,auto ARIMA,51.147944926766016
+random days,8,this method,23.87805662802099
+random days,8,"this method, no smooth term",31.560590384607714
+random days,9,carry forward,56.532749906383295
+random days,9,linear interpolation,43.220182451078514
+random days,9,city average,41.21853124964305
+random days,9,auto ARIMA,50.72139902959389
+random days,9,this method,24.8631104594365
+random days,9,"this method, no smooth term",32.41830749744633
+random weeks,0,carry forward,78.82358414002229
+random weeks,0,linear interpolation,64.53596044751372
+random weeks,0,city average,39.26146753023018
+random weeks,0,auto ARIMA,62.75973028251815
+random weeks,0,this method,29.274812230324173
+random weeks,0,"this method, no smooth term",31.380784289831976
+random weeks,1,carry forward,83.0111147996942
+random weeks,1,linear interpolation,65.65948103746473
+random weeks,1,city average,39.63061243622973
+random weeks,1,auto ARIMA,64.0785512963236
+random weeks,1,this method,29.44185036192113
+random weeks,1,"this method, no smooth term",31.88507510715199
+random weeks,2,carry forward,79.17592943223435
+random weeks,2,linear interpolation,66.41098928389906
+random weeks,2,city average,40.473945653636726
+random weeks,2,auto ARIMA,64.00782472286811
+random weeks,2,this method,29.634937071861557
+random weeks,2,"this method, no smooth term",31.96298483312891
+random weeks,3,carry forward,77.78169747241184
+random weeks,3,linear interpolation,64.97639498832307
+random weeks,3,city average,39.37373593913711
+random weeks,3,auto ARIMA,62.80992994717296
+random weeks,3,this method,29.274333336961814
+random weeks,3,"this method, no smooth term",32.3678554194144
+random weeks,4,carry forward,80.79271839554914
+random weeks,4,linear interpolation,63.782117168987845
+random weeks,4,city average,39.67935001640564
+random weeks,4,auto ARIMA,62.72319484696135
+random weeks,4,this method,27.993459082924733
+random weeks,4,"this method, no smooth term",30.614611137377363
+random weeks,5,carry forward,78.31420316806555
+random weeks,5,linear interpolation,63.50278579560216
+random weeks,5,city average,39.82440864084101
+random weeks,5,auto ARIMA,61.966449273795014
+random weeks,5,this method,28.645525138126136
+random weeks,5,"this method, no smooth term",31.16861422514108
+random weeks,6,carry forward,80.92648002109952
+random weeks,6,linear interpolation,65.55491219614134
+random weeks,6,city average,40.61972826727132
+random weeks,6,auto ARIMA,63.97284507803304
+random weeks,6,this method,29.423691471325096
+random weeks,6,"this method, no smooth term",31.981239709055842
+random weeks,7,carry forward,80.86521722283166
+random weeks,7,linear interpolation,65.52405131932763
+random weeks,7,city average,39.67630197335731
+random weeks,7,auto ARIMA,63.94436143469114
+random weeks,7,this method,27.485462797055547
+random weeks,7,"this method, no smooth term",30.475387093348733
+random weeks,8,carry forward,79.9267855457307
+random weeks,8,linear interpolation,64.72785448981364
+random weeks,8,city average,39.97957713323855
+random weeks,8,auto ARIMA,63.49062786726068
+random weeks,8,this method,28.406741744078023
+random weeks,8,"this method, no smooth term",31.662496631265675
+random weeks,9,carry forward,79.27201710352092
+random weeks,9,linear interpolation,64.49099044039376
+random weeks,9,city average,41.331235568115765
+random weeks,9,auto ARIMA,62.511983427415714
+random weeks,9,this method,30.223757583697996
+random weeks,9,"this method, no smooth term",33.17182523264586

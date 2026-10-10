@@ -1,0 +1,6 @@
+place,station_id,lat,lon,source
+TERI SAS campus (Vasant Kunj),,28.5446211,77.1481773,map on https://www.terisas.ac.in/contact-us.php
+IGI Airport T3,igi_airport_t3_imd,28.563,77.118,"Miinalainen et al. (2022), supplement to ACP discussion paper acp-2022-513, Table S1"
+R K Puram,r_k_puram_dpcc,28.563,77.187,"Miinalainen et al. (2022), supplement to ACP discussion paper acp-2022-513, Table S1"
+Sirifort,sirifort_cpcb,28.550,77.216,"Miinalainen et al. (2022), supplement to ACP discussion paper acp-2022-513, Table S1"
+Dwarka Sector 8,dwarka_sector_8_dpcc,28.571,77.072,"Miinalainen et al. (2022), supplement to ACP discussion paper acp-2022-513, Table S1"
