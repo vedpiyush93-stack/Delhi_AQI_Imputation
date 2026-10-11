@@ -12,15 +12,21 @@ The four monitors within 8 km of TERI SAS are on top.</em></p>
 
 ## Why the blanks matter
 
-| | |
-|:--|:--|
-| **the rule** | A day needs at least **16 hours** of readings, or it gets no AQI ([CPCB, National Air Quality Index](https://cpcb.gov.in/displaypdf.php?id=bmF0aW9uYWwtYWlyLXF1YWxpdHktaW5kZXgvRklOQUwtUkVQT1JUX0FRSV8ucGRm)). In 2017, **35%** of monitor-days were blank. |
-| **what goes missing** | The clean days. In 2017, **67%** of monitor-days were blank in the monsoon (Jul–Sep), against **28%** in the winter smog (Oct–Dec). |
-| **the yearly mean** | The national standard's yearly figure is the mean of the readings ([NAAQS 2009](https://cpcb.gov.in/uploads/National_Ambient_Air_Quality_Standards.pdf)). For 2017 that is **244**; with the blanks filled by this method, **197**: **+47 AQI** too high. |
+A monitor-day counts only if the monitor reported at least **16 hours** of it, CPCB's rule
+([National Air Quality Index](https://cpcb.gov.in/displaypdf.php?id=bmF0aW9uYWwtYWlyLXF1YWxpdHktaW5kZXgvRklOQUwtUkVQT1JUX0FRSV8ucGRm));
+otherwise it is blank. Give each day the mean AQI of the monitors that reported, and so a CPCB category, then count
+the blank monitor-days:
 
-**Averaging just the readings we have biases the yearly average.** The bias does not depend on the model: averaging
-each month's readings and weighting the month by its days in service, with no filling at all, 2017 comes to 224,
-so the readings alone are still 20 points too high.
+| city AQI that day (CPCB category) | days | blank monitor-days | in service | share blank |
+|:--|--:|--:|--:|--:|
+| clean: Good, Satisfactory (0–100) | 476 | 2,911 | 15,844 | **18.4%** |
+| between: Moderate, Poor (101–300) | 1,498 | 7,356 | 50,424 | 14.6% |
+| smoggy: Very poor, Severe (301–500) | 562 | 1,823 | 19,320 | **9.4%** |
+| no monitor reported | 20 | 305 | 305 | |
+| all of 2017–2023 | 2,556 | 12,395 | 85,893 | 14.4% |
+
+**Clean days go missing twice as often**, and more often than smoggy days in every year from 2017 to 2023. So an
+average of just the readings reads high, which is why the blanks are worth filling.
 
 ## The method
 
@@ -67,7 +73,7 @@ Hide readings we have, refill them, and score the refill: RMSE in AQI points, lo
   search by AICc). It needs an unbroken series, so each monitor's blanks are first filled by straight lines; each
   hidden day is then predicted from the days before it.
 
-The notebook also covers whole hidden weeks, the method without its smooth term, and filling each new day as it comes.
+The notebook also covers whole hidden weeks and the method without its smooth term.
 
 ## Run it yourself
 
@@ -100,7 +106,7 @@ Tested on macOS (Apple silicon), Python 3.12.2, with the versions in `requiremen
 | `Delhi_AQI_Imputation.ipynb` | the whole analysis, top to bottom, with commentary and saved outputs |
 | `data/raw/` | 39 hourly AQI files, one per monitor, as downloaded (`urls.txt` lists each source link) |
 | `data/delhi_daily_aqi.csv` | the daily table the notebook builds from `data/raw/` (39 monitors × 2,556 days) |
-| `data/station_coordinates.csv` | the TERI SAS campus and the four monitors within 8 km |
+| `data/station_coordinates.csv` | the TERI SAS campus and the 31 monitors in Table S1, with their coordinates |
 | `results/cv_folds.csv` | RMSE of every method on every fold (written by the notebook) |
 | `figures/` | the two figures above, from the notebook |
 | `requirements.txt` | the exact package versions |
@@ -112,8 +118,12 @@ Tested on macOS (Apple silicon), Python 3.12.2, with the versions in `requiremen
   each month is a block of rows, one row per day, one column per hour.
 * **Daily values.** A day counts only if at least 16 of its 24 hours were reported, the rule in CPCB's National Air
   Quality Index report. The daily value is the mean of those hours, capped at 500.
-* **Coordinates.** Miinalainen et al. (2022), supplement to ACP discussion paper acp-2022-513, Table S1. Campus pin
-  from the map on the [TERI SAS contact page](https://www.terisas.ac.in/contact-us.php).
+* **Distances from campus.** The campus is the marker in the map on the
+  [TERI SAS contact page](https://www.terisas.ac.in/contact-us.php) (28.5446° N, 77.1482° E). The monitors' coordinates
+  are Table S1 of the supplement to Miinalainen et al. (2022),
+  [ACP discussion paper acp-2022-513](https://doi.org/10.5194/acp-2022-513-supplement), which lists 31 of the 39
+  monitors. The distance is the great-circle (haversine) distance, with scikit-learn's `haversine_distances`. The 8
+  monitors not in Table S1, Sri Aurobindo Marg among them, are drawn with the rest.
 
 ## Author
 
